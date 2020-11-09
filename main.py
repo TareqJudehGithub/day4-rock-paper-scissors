@@ -97,10 +97,3 @@ elif your_choice == ai_choice:
   print("Draw!")
 else:
   print("You lose :(")
-
-
-'''
-Rock wins against scissors
-Scissors win against paper
-Paper wins against rock
-'''
