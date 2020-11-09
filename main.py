@@ -1,4 +1,4 @@
-from random import randint
+from random import randint, choice
 
 # Solution:
 print("")
@@ -11,10 +11,6 @@ Game rules:
   Paper wins against rock
 
 ''')
-
-your_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper, and 2 for Scissors\n"))
-ai_choice = randint(0, 2)
-
 
 rock = '''
     _______
@@ -42,48 +38,57 @@ scissors = '''
       (____)
 ---.__(___)
 '''
-
 # ======================
+
+
+images = [rock, paper, scissors]
+your_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper, and 2 for Scissors\n"))
+ai_choice = randint(0, len(images) - 1)
 
 # Player choice:
 if your_choice == 0:
   print('''You've chosen:
   ''')
-  print(rock)
+  print(images[0])
   print("")
   
-if your_choice == 1:
+elif your_choice == 1:
   print('''You've chosen:
   
   ''')
-  print(paper)
+  print(images[1])
   print("")
 
-if your_choice == 2:
+elif your_choice == 2:
   print('''You've chosen:
   
   ''')
-  print(scissors)
+  print(images[2])
   print("")
 
+else:
+  print('''Invalid input!
+
+  ''')
+  
 
 # AI choice:
 if ai_choice == 0:
   print('''Computer chose:
   
   ''')
-  print(rock)
+  print(images[0])
 
 elif ai_choice == 1:
   print('''Computer chose:
-  
   ''')
-  print(paper)
+  print(images[1])
+
 elif ai_choice == 2:
   print('''Computer chose:
   
   ''')
-  print(scissors)
+  print(images[2])
 
 print("")
 
